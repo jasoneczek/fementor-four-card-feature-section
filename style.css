@@ -76,17 +76,14 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff-ss);
-  text-align: center;
   color: var(--clr-text-body);
   background-color: var(--clr-bg-main);
 }
 
-.main {
-  margin: 4rem 1.5rem;
-}
-
 .header {
-  margin-bottom: 4rem;
+  max-width: 33.75rem;
+  margin: 0 auto 5rem;
+  text-align: center;
 }
 
 .header__title {
@@ -99,5 +96,40 @@ body {
   display: block;
   font-weight: var(--fw-l);
   margin-bottom: 0.9375rem;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 69.375rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  background-color: var(--clr-white);
+  text-align: left;
+}
+
+@media (min-width: 48rem) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .card-1 {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  .card-2 {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .card-3 {
+    grid-area: 3 / 2 / 5 / 3;
+  }
+
+  .card-4 {
+    grid-area: 2 / 3 / 4 / 5;
+  }
 }
 
