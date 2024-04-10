@@ -1,0 +1,45 @@
+:root {
+  /* colors */
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-dark-blue: hsl(234, 12%, 34%);
+  --clr-gray-blue: hsl(229, 6%, 66%);
+  --clr-light-gray: hsl(0, 0%, 98%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-bg-main: var(--clr-light-gray);
+  --clr-bg-card: var(--clr-white);
+  --clr-text-header: var(--clr-dark-blue);
+  --clr-text-body: var(--clr-gray-blue);
+  --clr-card-1-border: var(--clr-cyan);
+  --clr-card-2-border: var(--clr-red);
+  --clr-card-3-border: var(--clr-orange);
+  --clr-card-4-border: var(--clr-blue);
+
+  /* typography */
+  --ff-ss: Poppins, sans-serif;
+
+  /* fluid font sizes for main header */
+  --h-main-sm: 1.5rem;
+  --h-main-lg: 2.25rem;
+  --fs-h-main: clamp(var(--h-main-sm), 2vw + 1rem, var(--h-main-lg));
+
+  /* header lead paragraph */
+  --fs-h-lead: 0.9375rem;
+
+  /* card title */
+  --fs-h-card: 1.25rem;
+  /* card body */
+  --fs-b-card: 0.8125rem;
+
+  --border-radius: 0.5rem;
+}
+
+body {
+  font-family: var(--ff-ss);
+}
+.header {
+  font-size: var(--fs-h-main);
+}
