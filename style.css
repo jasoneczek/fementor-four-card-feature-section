@@ -34,6 +34,11 @@
   /* card body */
   --fs-b-card: 0.8125rem;
 
+  /* font weights */
+  --fw-l: 200;
+  --fw-r: 400;
+  --fw-sb: 600;
+
   --border-radius: 0.5rem;
 }
 
@@ -76,7 +81,23 @@ body {
   background-color: var(--clr-bg-main);
 }
 
+.main {
+  margin: 4rem 1.5rem;
+}
+
 .header {
+  margin-bottom: 4rem;
+}
+
+.header__title {
   font-size: var(--fs-h-main);
+  font-weight: var(--fw-sb);
+  color: var(--clr-text-header);
+}
+
+.header__light {
+  display: block;
+  font-weight: var(--fw-l);
+  margin-bottom: 0.9375rem;
 }
 
