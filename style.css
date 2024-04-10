@@ -37,9 +37,46 @@
   --border-radius: 0.5rem;
 }
 
-body {
-  font-family: var(--ff-ss);
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
+
+*, 
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2, 
+h3 {
+  line-height: 1.1;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-ss);
+  text-align: center;
+  color: var(--clr-text-body);
+  background-color: var(--clr-bg-main);
+}
+
 .header {
   font-size: var(--fs-h-main);
 }
+
