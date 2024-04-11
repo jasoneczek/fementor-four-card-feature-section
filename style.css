@@ -68,6 +68,11 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  width: clamp()
+}
+
 body {
   min-height: 100svh;
   line-height: 1.5;
@@ -80,34 +85,84 @@ body {
   background-color: var(--clr-bg-main);
 }
 
+.main {
+  margin: 5rem 2rem;
+}
+
 .header {
   max-width: 33.75rem;
   margin: 0 auto 5rem;
   text-align: center;
 }
 
-.header__title {
+.header-title {
   font-size: var(--fs-h-main);
   font-weight: var(--fw-sb);
   color: var(--clr-text-header);
+  margin-bottom: 1.25rem;
 }
 
-.header__light {
+.header-light {
   display: block;
   font-weight: var(--fw-l);
   margin-bottom: 0.9375rem;
+}
+
+.header-lead {
+  font-size: var(--fs-h-lead);
 }
 
 .wrapper {
   display: grid;
   gap: 1.5rem;
   max-width: 69.375rem;
-  margin-bottom: 5rem;
 }
 
 .card {
   background-color: var(--clr-white);
   text-align: left;
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  border-top: 0.25rem solid var(--border-clr);
+  box-shadow: 0 5px 15px rgba(20, 120, 180, 0.2);
+}
+
+.card-1 {
+  --border-clr: var(--clr-card-1-border);
+}
+
+.card-2 {
+  --border-clr: var(--clr-card-2-border);
+}
+
+.card-3 {
+  --border-clr: var(--clr-card-3-border);
+}
+
+.card-4 {
+  --border-clr: var(--clr-card-4-border);
+}
+
+.card-title {
+  font-size: var(--fs-h-card);
+  color: var(--clr-text-header);
+  margin-bottom: 0.625rem;
+}
+
+.card-text {
+  font-size: var(--fs-b-card);
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+}
+
+.card-icon {
+  height: 3.5625rem;
+  width: 3.5625rem;
+  margin-left: auto;
+}
+
+.footer {
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 48rem) {
