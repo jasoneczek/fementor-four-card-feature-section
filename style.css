@@ -24,13 +24,14 @@
   /* fluid font sizes for main header */
   --h-main-sm: 1.5rem;
   --h-main-lg: 2.25rem;
-  --fs-h-main: clamp(var(--h-main-sm), 2vw + 1rem, var(--h-main-lg));
+  --fs-h-main: clamp(var(--h-main-sm), 3vw, var(--h-main-lg));
 
   /* header lead paragraph */
   --fs-h-lead: 0.9375rem;
 
   /* card title */
   --fs-h-card: 1.25rem;
+
   /* card body */
   --fs-b-card: 0.8125rem;
 
@@ -39,6 +40,15 @@
   --fw-r: 400;
   --fw-sb: 600;
 
+  /* spacing */
+  --grid-gap: clamp(1.5rem, 3vw, 1.75rem);
+  --mb-card-title: clamp(0.625rem, 2vw, 0.875rem);
+  --p-card-body: clamp(1.75rem, 3vw + 1rem, 2rem);
+
+  /* icon size */
+  --icon-sm: 3.5625rem;
+  --icon-lg: 4rem;
+  --img-size: clamp(var(--icon-sm), 4vw + 1rem, var(--icon-lg));
   --border-radius: 0.5rem;
 }
 
@@ -70,7 +80,6 @@ ul {
 
 img {
   display: block;
-  width: clamp()
 }
 
 body {
@@ -86,7 +95,7 @@ body {
 }
 
 .main {
-  margin: 5rem 2rem;
+  margin: 5rem 2rem 3rem;
 }
 
 .header {
@@ -110,18 +119,19 @@ body {
 
 .header-lead {
   font-size: var(--fs-h-lead);
+  font-weight: var(--fw-r);
 }
 
 .wrapper {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--grid-gap);
   max-width: 69.375rem;
 }
 
 .card {
-  background-color: var(--clr-white);
   text-align: left;
-  padding: 1.75rem;
+  background-color: var(--clr-white);
+  padding: var(--p-card-body);
   border-radius: var(--border-radius);
   border-top: 0.25rem solid var(--border-clr);
   box-shadow: 0 5px 15px rgba(20, 120, 180, 0.2);
@@ -145,24 +155,27 @@ body {
 
 .card-title {
   font-size: var(--fs-h-card);
+  font-weight: var(--fw-sb);
   color: var(--clr-text-header);
-  margin-bottom: 0.625rem;
+  margin-bottom: var(--mb-card-title);
 }
 
 .card-text {
   font-size: var(--fs-b-card);
-  margin-bottom: 1.75rem;
+  font-weight: var(--fw-r);
+  margin-bottom: clamp(1.75rem, 2vw + 1rem, 2.25rem);
   line-height: 1.7;
 }
 
 .card-icon {
-  height: 3.5625rem;
-  width: 3.5625rem;
+  height: var(--img-size);
+  width: var(--img-size);
   margin-left: auto;
 }
 
 .footer {
   padding-bottom: 1rem;
+  font-weight: var(--fw-r);
 }
 
 @media (min-width: 48rem) {
@@ -184,7 +197,7 @@ body {
   }
 
   .card-4 {
-    grid-area: 2 / 3 / 4 / 5;
+    grid-area: 2 / 3 / 4 / 4;
   }
 }
 
